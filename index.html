@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mangrove — Menu | A restaurant by Oceanature, Alibaug</title>
+<meta name="description" content="Menu at Mangrove, a seafood and multicuisine restaurant by Oceanature. Nagaon Bandar Road, Alibaug.">
+<meta name="theme-color" content="#C9D2B4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     MENU DATA — this is the only part you need to change.
+     Edit a price, add a dish, remove a dish, all right here.
+     Or open this page with ?edit=1 at the end of the link to
+     edit on screen and download an updated file.
+     n = name | d = description | p = price
+     "pre": true  = pre-order item
+     ============================================================ -->
+<script id="menu-data" type="application/json">
+{
+  "restaurant": "Mangrove",
+  "kicker": "Seafood & Multicuisine",
+  "byline": "A restaurant by Oceanature",
+  "tagline": "Rich flavours of the coast, from fresh, locally sourced ingredients and cherished authentic recipes.",
+  "phone": "7410156005 / 9049089077",
+  "email": "oceanature.alibaug@gmail.com",
+  "web": "www.oceanature.com",
+  "instagram": "@Oceanature_alibaug",
+  "hashtags": "#GroovyMangrove  #LoveOceanature",
+  "address": "Nagaon Bandar Road, Nagaon, Alibaug 402204",
+  "notes": [
+    "A 5% service charge is applicable.",
+    "Dishes marked pre-order need to be told to the kitchen in advance.",
+    "\"As per catch\" is priced on the day, by the day's catch."
+  ],
+  "sections": [
+    {
+      "id": "breakfast",
+      "t": "Breakfast",
+      "note": "A la carte breakfast, 8am to 10am",
+      "groups": [
+        { "g": "", "items": [
+          { "n": "Eggs to order", "d": "Masala omelette, fried, sunny side up, scrambled or bhurji. Served with toast, potato wedges and grilled tomatoes.", "p": "225" },
+          { "n": "Pancake", "d": "Chocolate syrup or maple syrup. Add seasonal fruit for ₹50.", "p": "220" },
+          { "n": "French Toast", "d": "Chocolate syrup or maple syrup", "p": "200" },
+          { "n": "Fruit Plate", "d": "Seasonal cut fruits", "p": "220" },
+          { "n": "Tomato Omelette", "d": "Gram flour, tomatoes, onion, green chillies", "p": "120" },
+          { "n": "Paratha — Aloo / Paneer", "d": "Served with curd and pickle", "p": "130 / 170" },
+          { "n": "Thalipeeth", "d": "Mixed gram flour, onion, coriander. Served with curd and pickle.", "p": "150" },
+          { "n": "Sandwich — Veg / Veg & Cheese / Chicken", "d": "", "p": "120 / 160 / 180" },
+          { "n": "Grilled Sandwich — Veg / Veg & Cheese / Chicken", "d": "", "p": "140 / 180 / 200" },
+          { "n": "Kanda Pohe / Upma / Shira", "d": "", "p": "120" },
+          { "n": "Today's Special", "d": "Check with your server for other breakfast items", "p": "As per dish" }
+        ]},
+        { "g": "Cafe & Tea", "items": [
+          { "n": "Cappuccino", "d": "", "p": "150" },
+          { "n": "Iced Latte", "d": "", "p": "180" },
+          { "n": "Cold Coffee", "d": "", "p": "150" },
+          { "n": "Nescafe", "d": "", "p": "60" },
+          { "n": "Masala Tea", "d": "", "p": "50" },
+          { "n": "Black Tea", "d": "", "p": "40" },
+          { "n": "Hot Chocolate", "d": "", "p": "120" },
+          { "n": "Bournvita", "d": "", "p": "130" },
+          { "n": "Milk — Cup / Glass", "d": "Hot or cold", "p": "50 / 80" }
+        ]}
+      ]
+    },
+    {
+      "id": "beverages",
+      "t": "Beverages",
+      "groups": [
+        { "g": "Fresh Juices", "items": [
+          { "n": "Watermelon Ginger Juice", "d": "", "p": "200" },
+          { "n": "Pink Pineapple", "d": "Strawberry, pineapple", "p": "250" },
+          { "n": "Bloody Pineapple", "d": "Beetroot, pineapple", "p": "220" },
+          { "n": "Fresh Pineapple / Orange / Mosambi", "d": "", "p": "250" },
+          { "n": "Fresh Watermelon", "d": "", "p": "200" }
+        ]},
+        { "g": "Mocktails", "items": [
+          { "n": "Iced Tea — Peach / Lemon", "d": "", "p": "150" },
+          { "n": "Virgin Mojito", "d": "", "p": "150" },
+          { "n": "Pomegranate Mojito", "d": "", "p": "200" },
+          { "n": "Kiwi Mojito", "d": "", "p": "250" },
+          { "n": "Spicy Guava", "d": "", "p": "200" },
+          { "n": "Spicy Mango", "d": "", "p": "200" },
+          { "n": "Pina Colada", "d": "", "p": "250" }
+        ]},
+        { "g": "Milkshakes", "items": [
+          { "n": "Oreo / Chocolate", "d": "", "p": "250" },
+          { "n": "Mango / Strawberry", "d": "", "p": "250" }
+        ]},
+        { "g": "Cooling & Soft", "items": [
+          { "n": "Fresh Tender Coconut", "d": "", "p": "60" },
+          { "n": "Fresh Lime Soda", "d": "", "p": "120" },
+          { "n": "Fresh Lime Water", "d": "", "p": "90" },
+          { "n": "Kokum Sharbat", "d": "", "p": "70" },
+          { "n": "Buttermilk", "d": "", "p": "90" },
+          { "n": "Lassi — Sweet / Salty", "d": "", "p": "140" },
+          { "n": "Soft Drink", "d": "", "p": "60" }
+        ]}
+      ]
+    },
+    {
+      "id": "local",
+      "t": "Local Cuisine",
+      "groups": [
+        { "g": "", "items": [
+          { "n": "Solkadhi", "d": "Coconut milk flavoured with kokam, garlic and green chilli", "p": "90" },
+          { "n": "Chicken Sukka", "d": "Dry chicken preparation with coconut and malvani masala", "p": "300" },
+          { "n": "Prawns Koliwada", "d": "Marinated prawns, deep fried with a crispy coating, sprinkle of chat masala", "p": "450" },
+          { "n": "Tawa Fry — Surmai / Prawns / Pomfret / Bombil", "d": "", "p": "450" },
+          { "n": "Fish Curry — Pomfret / Surmai / Prawns", "d": "", "p": "480" },
+          { "n": "Chicken Malvani", "d": "Chicken cooked in special local masala", "p": "350" },
+          { "n": "Kombdi Vade", "d": "Chicken malvani masala, hot puff vade (4 pcs), solkadi, koshimbir", "p": "400" },
+          { "n": "Chapati / Bhakri", "d": "", "p": "30 / 50" },
+          { "n": "Vade Plate (4 pc)", "d": "", "p": "100" }
+        ]},
+        { "g": "Local Bhaaji", "note": "Pre-order. Local sabzi that serves two.", "items": [
+          { "n": "Nir Fanas Bhaaji (Breadfruit)", "d": "", "p": "300", "pre": true },
+          { "n": "Vangyache Bharit (Brinjal)", "d": "", "p": "300", "pre": true },
+          { "n": "Bharli Vangi (Brinjal)", "d": "", "p": "300", "pre": true }
+        ]},
+        { "g": "Local Seafood", "note": "Pre-order", "items": [
+          { "n": "Chimbori (Crab) — Masala", "d": "", "p": "As per catch", "pre": true },
+          { "n": "Shevande (Lobster) — Butter Garlic / Masala", "d": "", "p": "As per catch", "pre": true },
+          { "n": "Bombil (Bombay Duck) — Tawa Fry / Deep Fry (4 pcs)", "d": "", "p": "450", "pre": true },
+          { "n": "Bangda (Indian Mackerel) — Tawa Fry (2 pcs)", "d": "", "p": "350", "pre": true },
+          { "n": "Kalva (Oysters) — Masala / Fry", "d": "", "p": "450", "pre": true },
+          { "n": "Mandeli (Golden Anchovy) — Tawa Fry", "d": "", "p": "400", "pre": true },
+          { "n": "Shimplya (Clams) — Masala", "d": "", "p": "500", "pre": true }
+        ]},
+        { "g": "Thali", "items": [
+          { "n": "Veg Thali", "d": "2 vegetables, dal, rice, 2 chapati or 2 bhakri, solkadi, koshimbir, mirgund (local speciality papad), sweet", "p": "350" },
+          { "n": "Chicken Thali", "d": "Chicken dry, chicken malvani curry, rice, 2 chapati or 2 bhakri, solkadi, koshimbir, mirgund", "p": "450" },
+          { "n": "Fish Thali — Surmai / Pomfret / Prawns", "d": "Fish fry, prawns malvani curry, rice, 2 chapati or 2 bhakri, solkadi, koshimbir, mirgund", "p": "500" }
+        ]}
+      ]
+    },
+    {
+      "id": "soups",
+      "t": "Soups & Salads",
+      "groups": [
+        { "g": "Soups", "items": [
+          { "n": "Tomato Basil Soup", "d": "Rich and creamy tomato soup infused with basil", "p": "200" },
+          { "n": "Sweetcorn Soup — Veg / Chicken", "d": "", "p": "200 / 225" },
+          { "n": "Cream of Mushroom / Veg / Chicken", "d": "Creamy velvety soup with aromatic herbs", "p": "200" },
+          { "n": "Manchow Soup — Veg / Chicken", "d": "", "p": "225 / 245" },
+          { "n": "Chicken Shorba", "d": "", "p": "200" },
+          { "n": "Thai Noodles Soup — Veg / Chicken", "d": "Savoury broth, exotic vegetables, tender noodles with Asian flavours", "p": "225 / 245" },
+          { "n": "Thai Shrimp Coconut Soup", "d": "Thai creamy soup, coconut milk flavoured with Thai paste, prawns", "p": "250" }
+        ]},
+        { "g": "Salads", "items": [
+          { "n": "Mediterranean Greek Salad", "d": "Lettuce, tomatoes, bell pepper, onion, cucumber, olives, feta cheese, vinaigrette dressing", "p": "300" },
+          { "n": "Chicken Caesar Salad", "d": "Lettuce, grilled chicken, tomatoes, parmesan cheese, croutons, caesar dressing", "p": "320" },
+          { "n": "Classic Green Salad", "d": "Slices of tomato, carrot, cucumber, beetroot", "p": "120" }
+        ]}
+      ]
+    },
+    {
+      "id": "continental",
+      "t": "Continental",
+      "groups": [
+        { "g": "Appetisers", "items": [
+          { "n": "French Fries — Salted / Peri Peri / Cheesy", "d": "", "p": "200 / 250 / 280" },
+          { "n": "Chicken Fries", "d": "", "p": "250" },
+          { "n": "Onion Rings", "d": "", "p": "220" },
+          { "n": "Veggie Cheesy Pizza Fingers", "d": "Crispy deep fried, assorted veggies, melted cheese, thousand island dip", "p": "200" },
+          { "n": "Jalapeno Poppers", "d": "Crispy breaded and deep fried, with jalapeno and cheese", "p": "180" },
+          { "n": "Cheese Chilli Toast", "d": "Cheese mixed with green chillies and garlic, served on toast", "p": "200" },
+          { "n": "Chicken Chilli Garlic Fingers", "d": "", "p": "300" },
+          { "n": "Crab Lollipop", "d": "Crispy deep fried crab meat, served with tartar sauce", "p": "450" },
+          { "n": "Chicken Nuggets", "d": "", "p": "250" },
+          { "n": "Fish Fingers", "d": "Breaded and deep fried, served with tartar sauce", "p": "400" },
+          { "n": "Lemon Butter Garlic Prawns", "d": "Succulent prawns in a zesty lemon butter garlic sauce", "p": "480" }
+        ]},
+        { "g": "Mains", "items": [
+          { "n": "Penne Arrabiata", "d": "Spicy tomato sauce with garlic, chilli and herbs, exotic veggies, parmesan, garlic toast. Add grilled chicken ₹100.", "p": "450" },
+          { "n": "Spaghetti Alfredo", "d": "Shitake mushrooms, white sauce, white wine, exotic veggies, parmesan, garlic toast. Add grilled chicken ₹100.", "p": "450" },
+          { "n": "Grilled Chicken with Rosemary Sauce", "d": "Mashed potatoes, sauteed vegetables, rosemary sauce", "p": "450" },
+          { "n": "Veg / Chicken Stroganoff", "d": "Rich and creamy, veggies, herbed rice", "p": "400 / 450" },
+          { "n": "Nachos Supreme", "d": "Tortilla chips, beans, salsa, bell pepper, cheese sauce, olives. Add grilled chicken ₹100.", "p": "300" }
+        ]},
+        { "g": "Pizzas", "note": "8 inch", "items": [
+          { "n": "Classic Margherita Pizza", "d": "Tomato sauce, basil, mozzarella", "p": "400" },
+          { "n": "Veg Mexican Green Wave", "d": "Tomato sauce, beans, bell peppers, onion, olives, tomato, jalapeno, mozzarella and cheddar", "p": "450" },
+          { "n": "Ocean Veg Paradise", "d": "Tomato sauce, bell peppers, onion, olives, zucchini, mozzarella and cheddar", "p": "450" },
+          { "n": "BBQ Chicken Pizza", "d": "BBQ chicken, caramelised onion, feta and mozzarella", "p": "550" },
+          { "n": "Chicken Pesto Pizza", "d": "Pesto sauce, grilled chicken, tomato, mozzarella, parmesan", "p": "550" }
+        ]},
+        { "g": "Burgers", "items": [
+          { "n": "Veggie Burger", "d": "Deep fried veggie patty, lettuce, tomato, spicy sauce, sliced cheese. Served with fries and salad.", "p": "300" },
+          { "n": "Paneer Burger", "d": "Deep fried paneer patty, lettuce, tomato, spicy sauce, sliced cheese. Served with fries and salad.", "p": "350" },
+          { "n": "Grilled Chicken Burger", "d": "House marinated chicken, lettuce, tomato, sliced cheese. Served with fries and salad.", "p": "400" },
+          { "n": "Crispy Chicken Burger", "d": "House marinated chicken breast, deep fried, lettuce, tomato, sliced cheese. Served with fries and salad.", "p": "400" }
+        ]}
+      ]
+    },
+    {
+      "id": "oriental",
+      "t": "Oriental",
+      "groups": [
+        { "g": "Appetisers", "items": [
+          { "n": "Wok Toss Sesame Paneer Chilli", "d": "Paneer, bell pepper, onion, tossed in sesame, chilli and aromatic spices", "p": "350" },
+          { "n": "Gobi Manchurian Dry", "d": "", "p": "280" },
+          { "n": "Babycorn Mushroom Chilli", "d": "Babycorn and mushroom fritters, bell peppers, spicy tangy sauce", "p": "320" },
+          { "n": "Honey Chilli Potato", "d": "", "p": "280" },
+          { "n": "Kung Pao Paneer", "d": "Paneer, bell pepper, peanuts, chilli, savoury spicy sauce", "p": "350" },
+          { "n": "Chicken 65", "d": "Chicken, yoghurt, curry leaves, savoury spicy sauce", "p": "375" },
+          { "n": "Chicken Lollipop", "d": "", "p": "350" },
+          { "n": "Korean Chicken", "d": "Crispy fried chicken, sesame, coated in honey and spicy sauce", "p": "390" },
+          { "n": "Chicken Barbecue", "d": "Tender chicken, bell peppers, onions, barbeque sauce, Chinese style", "p": "390" },
+          { "n": "Dragon Chicken", "d": "Tender chicken, bell peppers, onions, red chillies, schezwan sauce", "p": "375" },
+          { "n": "Pan Fried Chilli Prawns", "d": "Juicy prawns, ginger, garlic, bell peppers, chilli sauce", "p": "500" }
+        ]},
+        { "g": "Mains", "items": [
+          { "n": "Fried Rice — Veg / Egg / Chicken", "d": "", "p": "270 / 300 / 350" },
+          { "n": "Hunan Fried Rice — Veg / Egg / Chicken", "d": "Stir fry rice with vegetables, oyster sauce, soy sauce", "p": "300 / 330 / 360" },
+          { "n": "Singapore Fried Rice — Veg / Egg / Chicken", "d": "Stir fry rice with vegetables and curry powder", "p": "300 / 330 / 360" },
+          { "n": "Hakka Noodles — Veg / Egg / Chicken", "d": "Add schezwan ₹50", "p": "270 / 300 / 350" },
+          { "n": "Hot Garlic Gravy — Paneer / Chicken / Prawns", "d": "", "p": "350 / 400 / 450" },
+          { "n": "Thai Fried Rice with Exotic Vegetable — Veg / Chicken", "d": "", "p": "300 / 350" },
+          { "n": "Hakka Noodles with Exotic Vegetable — Veg / Chicken", "d": "", "p": "350 / 400" },
+          { "n": "Mushroom & Baby Corn Chilli Gravy", "d": "", "p": "350" },
+          { "n": "Manchurian Gravy — Veg / Chicken", "d": "", "p": "350 / 400" }
+        ]}
+      ]
+    },
+    {
+      "id": "indian",
+      "t": "Indian Mains",
+      "groups": [
+        { "g": "Veg", "items": [
+          { "n": "Vegetable Kolhapuri", "d": "", "p": "320" },
+          { "n": "Vegetable Kadhai", "d": "", "p": "350" },
+          { "n": "Bhendi Masala", "d": "", "p": "250" },
+          { "n": "Aloo Jeera", "d": "", "p": "220" },
+          { "n": "Dum Aloo Punjabi", "d": "", "p": "280" },
+          { "n": "Bhendi Jalfrezi", "d": "", "p": "300" },
+          { "n": "Vegetable Makhanwala", "d": "", "p": "350" },
+          { "n": "Paneer Butter Masala", "d": "", "p": "350" },
+          { "n": "Veg Jaipuri", "d": "", "p": "350" },
+          { "n": "Palak Paneer", "d": "", "p": "300" },
+          { "n": "Mushroom Masala", "d": "", "p": "350" },
+          { "n": "Paneer Kaju Masala", "d": "", "p": "400" },
+          { "n": "Paneer Laziz", "d": "", "p": "400" }
+        ]},
+        { "g": "Chicken", "items": [
+          { "n": "Butter Chicken", "d": "", "p": "450" },
+          { "n": "Chicken Kurchan", "d": "", "p": "550" },
+          { "n": "Chicken Bhunna", "d": "", "p": "500" },
+          { "n": "Chicken Ghee Roast", "d": "", "p": "550" },
+          { "n": "Chicken Hyderabadi", "d": "", "p": "400" },
+          { "n": "Chicken Kadhai", "d": "", "p": "400" }
+        ]},
+        { "g": "Rice, Dals & Paratha", "items": [
+          { "n": "Steam Rice / Jeera Rice", "d": "", "p": "150 / 170" },
+          { "n": "Dal Khichdi", "d": "", "p": "250" },
+          { "n": "Dal Fry / Dal Tadka", "d": "", "p": "150 / 180" },
+          { "n": "Tawa Butter Paratha", "d": "", "p": "60" },
+          { "n": "Biryani — Vegetables / Chicken / Prawns", "d": "Served with raita and papad", "p": "300 / 400 / 500" }
+        ]},
+        { "g": "Sides", "items": [
+          { "n": "Masala Papad", "d": "", "p": "80" },
+          { "n": "Papad — Roasted / Fried", "d": "", "p": "50" },
+          { "n": "Plain Curd", "d": "", "p": "110" },
+          { "n": "Raita — Veg / Boondi", "d": "", "p": "90 / 120" },
+          { "n": "Masala Peanut", "d": "", "p": "140" }
+        ]}
+      ]
+    },
+    {
+      "id": "snacks",
+      "t": "Evening Snacks",
+      "note": "4:30pm to 7pm",
+      "groups": [
+        { "g": "", "items": [
+          { "n": "French Fries — Salted / Peri Peri", "d": "", "p": "200 / 250" },
+          { "n": "Veggie Cheesy Pizza Fingers", "d": "", "p": "200" },
+          { "n": "Chicken Nuggets", "d": "", "p": "250" },
+          { "n": "Kanda Bhaji (Onion Pakoda)", "d": "", "p": "170" },
+          { "n": "Mix Bhaji (Onion & Potato Pakoda)", "d": "", "p": "160" },
+          { "n": "Pakoda — Potato / Paneer / Cheese", "d": "", "p": "150 / 250 / 280" },
+          { "n": "Sandwich — Veg / Veg & Cheese / Chicken", "d": "", "p": "120 / 160 / 180" },
+          { "n": "Grilled Sandwich — Veg / Veg & Cheese / Chicken", "d": "", "p": "140 / 180 / 200" },
+          { "n": "Maggi — Plain / Masala / Cheese", "d": "", "p": "110 / 150 / 190" }
+        ]}
+      ]
+    },
+    {
+      "id": "kids",
+      "t": "Kids Menu",
+      "note": "Small portions",
+      "groups": [
+        { "g": "", "items": [
+          { "n": "Mac 'n' Cheese", "d": "", "p": "200" },
+          { "n": "Chocolate Sandwich", "d": "", "p": "120" },
+          { "n": "Boiled Vegetables with Salt & Pepper", "d": "", "p": "150" },
+          { "n": "Chapati with Desi Ghee & Jaggery", "d": "", "p": "100" },
+          { "n": "Cheese Chapati Roll", "d": "", "p": "100" },
+          { "n": "Dal Khichdi", "d": "Add vegetable ₹50", "p": "100" }
+        ]},
+        { "g": "Kids Thali", "note": "Small non-spicy meals, cooked with turmeric and salt", "items": [
+          { "n": "Plain Dal and Rice", "d": "", "p": "150" },
+          { "n": "Chicken — Curry and Rice", "d": "", "p": "250" },
+          { "n": "Fish — Curry, Rice and Fry", "d": "", "p": "450" }
+        ]}
+      ]
+    },
+    {
+      "id": "desserts",
+      "t": "Desserts",
+      "groups": [
+        { "g": "", "items": [
+          { "n": "Brownie with Icecream", "d": "", "p": "250" },
+          { "n": "Gulab Jamun", "d": "", "p": "100" },
+          { "n": "Matka Kulfi", "d": "", "p": "120" },
+          { "n": "Modak (6 pc)", "d": "", "p": "300", "pre": true }
+        ]},
+        { "g": "Icecream", "note": "2 scoops", "items": [
+          { "n": "Vanilla / Chocolate / Butterscotch", "d": "", "p": "120" },
+          { "n": "Strawberry / Mango", "d": "", "p": "120" }
+        ]}
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --sage:#C9D2B4;
+  --sage-deep:#A8B58C;
+  --paper:#EFEDE4;
+  --card:#FFFFFF;
+  --ink:#1A1A18;
+  --muted:#7E8377;
+  --clay:#B98E6E;
+  --rule:#DEDCD0;
+  --display:"Caveat",cursive;
+  --body:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;font-weight:300;line-height:1.5;-webkit-font-smoothing:antialiased}
+
+/* ---------- Cover ---------- */
+.cover{position:relative;padding:54px 22px 44px;text-align:center;background:var(--sage);overflow:hidden}
+.leaves{position:absolute;inset:0;opacity:.35;pointer-events:none}
+.mark{width:64px;height:64px;margin:0 auto 16px;display:block}
+.cover h1{font-family:var(--display);font-weight:700;font-size:clamp(56px,17vw,84px);line-height:.8;margin:0;color:var(--ink);letter-spacing:.01em}
+.cover .kicker{font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:#54594C;margin-top:12px}
+.cover .byline{font-size:12px;color:#54594C;margin-top:6px;font-weight:400}
+.cover .tag{font-size:13.5px;color:#4C5145;max-width:330px;margin:18px auto 0;line-height:1.6}
+
+/* ---------- Sticky nav ---------- */
+.bar{position:sticky;top:0;z-index:40;background:rgba(239,237,228,.97);border-bottom:1px solid var(--rule)}
+.search-wrap{padding:10px 14px 8px}
+#search{width:100%;font-family:var(--body);font-size:15px;font-weight:300;padding:11px 15px;border-radius:6px;border:1px solid var(--rule);background:#fff;color:var(--ink)}
+#search:focus{outline:2px solid var(--sage-deep);outline-offset:1px;border-color:transparent}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:0 14px 11px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;padding:8px 13px;border-radius:4px;border:1px solid var(--rule);background:#fff;color:#6C7165;text-decoration:none;white-space:nowrap}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+
+/* ---------- Sections ---------- */
+main{max-width:720px;margin:0 auto;padding:0 0 40px}
+.sec{padding-top:0}
+.band{background:var(--sage);padding:26px 20px 20px;margin-top:26px}
+.sec:first-child .band{margin-top:0}
+.band h2{font-family:var(--display);font-weight:700;font-size:clamp(40px,10vw,52px);line-height:.85;margin:0;color:var(--ink)}
+.band .note{font-size:11.5px;color:#4F5448;margin-top:9px;letter-spacing:.02em}
+.body{padding:8px 20px 22px;background:var(--card)}
+.grp{padding-top:18px}
+.grp-label{font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.grp-note{font-size:11.5px;color:var(--clay);margin-bottom:4px}
+.item{padding:13px 0;border-bottom:1px solid #EFEEE7}
+.line{display:flex;align-items:baseline;gap:12px}
+.name{font-size:16px;font-weight:500;color:var(--ink);line-height:1.3;flex:1}
+.price{font-size:16px;font-weight:500;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
+.price.catch{font-size:13px;font-weight:400;color:var(--clay);font-style:italic}
+.desc{font-size:12.5px;color:var(--muted);margin-top:5px;max-width:54ch;line-height:1.55;font-weight:300}
+.badge{display:inline-block;font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);border:1px solid #E4D3C4;border-radius:3px;padding:2px 6px;margin-left:8px;vertical-align:2px}
+
+/* ---------- Footer ---------- */
+footer{background:var(--sage);padding:38px 22px 46px;text-align:center}
+footer .thanks{font-family:var(--display);font-weight:700;font-size:46px;color:var(--ink);margin:0 0 8px;line-height:1}
+.social{font-size:13px;color:#4C5145;margin-bottom:20px;line-height:1.8}
+.social b{font-weight:600}
+.notes{max-width:420px;margin:0 auto 22px;font-size:11.5px;color:#565B4E;line-height:1.8}
+.contact a{display:block;color:var(--ink);text-decoration:none;font-weight:500;font-size:14px;margin:5px 0}
+.addr{font-size:11.5px;color:#565B4E;margin-top:12px;line-height:1.6}
+.no-results{padding:50px 20px;text-align:center;color:var(--muted);font-size:14px;background:var(--card)}
+
+/* ---------- Edit mode ---------- */
+body.editing .name,body.editing .price,body.editing .desc{outline:1px dashed #C3C8B6;outline-offset:3px;border-radius:2px}
+body.editing .desc:empty::before{content:"Add a description";color:#C3C8B6}
+body.editing{padding-bottom:96px}
+#editbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);color:#fff;padding:12px 14px calc(12px + env(safe-area-inset-bottom));display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12.5px;font-weight:300}
+#editbar b{font-weight:600;letter-spacing:.04em}
+#editbar .spacer{flex:1}
+#editbar button{font-family:var(--body);font-size:12.5px;font-weight:600;padding:9px 14px;border-radius:5px;border:0;background:var(--sage);color:var(--ink);cursor:pointer}
+#editbar button.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}
+.rowtools{display:flex;gap:8px;margin-top:9px}
+.rowtools button{font-family:var(--body);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:#fff;border:1px solid var(--rule);color:#6C7165;padding:5px 10px;border-radius:4px;cursor:pointer}
+.addbtn{font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:transparent;border:1px dashed var(--rule);color:#6C7165;padding:10px 14px;border-radius:5px;cursor:pointer;margin-top:14px;width:100%}
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+    <ellipse cx="50" cy="62" rx="26" ry="30" fill="none" stroke="#1A1A18" stroke-width="4.5"/>
+    <path d="M50 34 C50 22 54 14 62 9 C62 20 58 28 50 34 Z" fill="#1A1A18"/>
+    <path d="M50 44 L50 78" stroke="#1A1A18" stroke-width="3"/>
+    <path d="M43 50 L43 74 M57 50 L57 74 M50 48 L50 76" stroke="#1A1A18" stroke-width="2.2"/>
+  </svg>
+  <h1 id="rname">Mangrove</h1>
+  <div class="kicker" id="rkicker">Seafood &amp; Multicuisine</div>
+  <div class="byline" id="rbyline"></div>
+  <p class="tag" id="rtag"></p>
+</header>
+
+<nav class="bar">
+  <div class="search-wrap">
+    <input id="search" type="search" placeholder="Search a dish — prawn, thali, pizza…" aria-label="Search the menu">
+  </div>
+  <div class="chips" id="chips"></div>
+</nav>
+
+<main id="app"></main>
+
+<footer>
+  <p class="thanks">Thank you!</p>
+  <div class="social" id="social"></div>
+  <div class="notes" id="notes"></div>
+  <div class="contact" id="contact"></div>
+  <div class="addr" id="addr"></div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var DATA = JSON.parse(document.getElementById('menu-data').textContent);
+  var EDIT = /[?&]edit=1/.test(location.search) || location.hash === '#edit';
+  var app = document.getElementById('app');
+  var chips = document.getElementById('chips');
+
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function isCatch(p){ return /catch|per dish|market/i.test(p||''); }
+
+  document.getElementById('rname').textContent = DATA.restaurant;
+  document.getElementById('rkicker').textContent = DATA.kicker;
+  document.getElementById('rbyline').textContent = DATA.byline;
+  document.getElementById('rtag').textContent = DATA.tagline;
+  document.title = DATA.restaurant + ' — Menu | ' + DATA.byline;
+  document.getElementById('social').innerHTML =
+    'Scan &amp; follow <b>' + esc(DATA.instagram) + '</b><br>Tag us <b>' + esc(DATA.hashtags) + '</b>';
+  document.getElementById('notes').innerHTML = (DATA.notes||[]).map(function(n){
+    return '<div>'+esc(n)+'</div>'; }).join('');
+  document.getElementById('contact').innerHTML =
+    '<a href="tel:'+esc((DATA.phone||'').split('/')[0].trim())+'">'+esc(DATA.phone)+'</a>'+
+    '<a href="mailto:'+esc(DATA.email)+'">'+esc(DATA.email)+'</a>'+
+    '<a href="https://'+esc(DATA.web)+'" target="_blank" rel="noopener">'+esc(DATA.web)+'</a>';
+  document.getElementById('addr').textContent = DATA.address;
+
+  function itemHTML(it, si, gi, ii){
+    var badge = it.pre ? '<span class="badge">Pre-order</span>' : '';
+    var ce = EDIT ? ' contenteditable="true" data-s="'+si+'" data-g="'+gi+'" data-i="'+ii+'"' : '';
+    var tools = EDIT ? '<div class="rowtools">'+
+      '<button data-act="pre" data-s="'+si+'" data-g="'+gi+'" data-i="'+ii+'">Pre-order</button>'+
+      '<button data-act="del" data-s="'+si+'" data-g="'+gi+'" data-i="'+ii+'">Remove</button></div>' : '';
+    return '<div class="item" data-name="'+esc((it.n+' '+(it.d||'')).toLowerCase())+'">'+
+      '<div class="line">'+
+        '<span class="name"'+ce.replace('data-s','data-f="n" data-s')+'>'+esc(it.n)+'</span>'+ badge +
+        '<span class="price'+(isCatch(it.p)?' catch':'')+'"'+ce.replace('data-s','data-f="p" data-s')+'>'+
+          (isCatch(it.p)?esc(it.p):'\u20B9 '+esc(it.p))+'</span>'+
+      '</div>'+
+      ((it.d||EDIT)?'<div class="desc"'+ce.replace('data-s','data-f="d" data-s')+'>'+esc(it.d||'')+'</div>':'')+
+      tools+'</div>';
+  }
+
+  function render(){
+    var html = '', nav = '';
+    DATA.sections.forEach(function(sec, si){
+      nav += '<a class="chip" href="#'+esc(sec.id)+'" data-id="'+esc(sec.id)+'">'+esc(sec.t)+'</a>';
+      html += '<section class="sec" id="'+esc(sec.id)+'" data-sec>'+
+        '<div class="band"><h2>'+esc(sec.t)+'</h2>'+
+        (sec.note?'<div class="note">'+esc(sec.note)+'</div>':'')+'</div><div class="body">';
+      sec.groups.forEach(function(g, gi){
+        html += '<div class="grp" data-grp>'+
+          (g.g?'<div class="grp-label">'+esc(g.g)+'</div>':'')+
+          (g.note?'<div class="grp-note">'+esc(g.note)+'</div>':'');
+        g.items.forEach(function(it, ii){ html += itemHTML(it, si, gi, ii); });
+        if(EDIT) html += '<button class="addbtn" data-act="add" data-s="'+si+'" data-g="'+gi+'">+ Add a dish here</button>';
+        html += '</div>';
+      });
+      html += '</div></section>';
+    });
+    app.innerHTML = html;
+    chips.innerHTML = nav;
+    observe();
+  }
+
+  document.getElementById('search').addEventListener('input', function(e){
+    var q = e.target.value.trim().toLowerCase(), any = false;
+    app.querySelectorAll('.item').forEach(function(el){
+      var hit = !q || el.dataset.name.indexOf(q) > -1;
+      el.style.display = hit ? '' : 'none';
+      if(hit) any = true;
+    });
+    app.querySelectorAll('[data-grp]').forEach(function(g){
+      var vis = [].some.call(g.querySelectorAll('.item'), function(i){ return i.style.display !== 'none'; });
+      g.style.display = vis ? '' : 'none';
+    });
+    app.querySelectorAll('[data-sec]').forEach(function(s){
+      var vis = [].some.call(s.querySelectorAll('[data-grp]'), function(g){ return g.style.display !== 'none'; });
+      s.style.display = vis ? '' : 'none';
+    });
+    var old = document.querySelector('.no-results'); if(old) old.remove();
+    if(!any){
+      var d = document.createElement('div');
+      d.className = 'no-results';
+      d.textContent = 'Nothing on the menu matches that. Try a shorter word.';
+      app.appendChild(d);
+    }
+  });
+
+  var ticking = false;
+  function updateActive(){
+    ticking = false;
+    var bar = document.querySelector('.bar');
+    var offset = bar ? bar.offsetHeight : 110;
+    document.documentElement.style.scrollPaddingTop = (offset + 4) + 'px';
+    var secs = app.querySelectorAll('[data-sec]');
+    var active = null;
+    for(var i = 0; i < secs.length; i++){
+      if(secs[i].style.display === 'none') continue;
+      if(secs[i].getBoundingClientRect().top - offset - 8 <= 0) active = secs[i];
+    }
+    if(!active && secs.length) active = secs[0];
+    if(!active) return;
+    var changed = false;
+    chips.querySelectorAll('.chip').forEach(function(c){
+      var on = c.dataset.id === active.id;
+      if(on && !c.classList.contains('on')) changed = true;
+      c.classList.toggle('on', on);
+    });
+    if(changed){
+      var el = chips.querySelector('.chip.on');
+      if(el) chips.scrollLeft = el.offsetLeft - (chips.clientWidth - el.offsetWidth) / 2;
+    }
+  }
+  function queueUpdate(){
+    if(!ticking){ ticking = true; requestAnimationFrame(updateActive); }
+  }
+  window.addEventListener('scroll', queueUpdate, {passive:true});
+  window.addEventListener('resize', queueUpdate);
+  function observe(){ updateActive(); }
+
+  if(EDIT){
+    document.body.classList.add('editing');
+    var bar = document.createElement('div');
+    bar.id = 'editbar';
+    bar.innerHTML = '<b>Editing</b><span>Tap any name, price or note to change it.</span><span class="spacer"></span>'+
+      '<button id="dl">Download updated menu</button>'+
+      '<button class="ghost" id="exit">View as guest</button>';
+    document.body.appendChild(bar);
+
+    app.addEventListener('input', function(e){
+      var t = e.target;
+      if(!t.dataset || !t.dataset.f) return;
+      var it = DATA.sections[t.dataset.s].groups[t.dataset.g].items[t.dataset.i];
+      var v = t.textContent.trim();
+      if(t.dataset.f === 'p') v = v.replace(/^\u20B9\s*/,'');
+      it[t.dataset.f] = v;
+    });
+
+    app.addEventListener('click', function(e){
+      var b = e.target.closest('button[data-act]');
+      if(!b) return;
+      var grp = DATA.sections[b.dataset.s].groups[b.dataset.g], i = b.dataset.i;
+      if(b.dataset.act === 'add') grp.items.push({n:'New dish', d:'', p:'0'});
+      if(b.dataset.act === 'del' && confirm('Remove "'+grp.items[i].n+'" from the menu?')) grp.items.splice(i,1);
+      if(b.dataset.act === 'pre') grp.items[i].pre = !grp.items[i].pre;
+      render();
+    });
+
+    document.getElementById('exit').addEventListener('click', function(){ location.href = location.pathname; });
+
+    document.getElementById('dl').addEventListener('click', function(){
+      var clone = document.documentElement.cloneNode(true);
+      clone.querySelector('#app').innerHTML = '';
+      clone.querySelector('#chips').innerHTML = '';
+      var eb = clone.querySelector('#editbar'); if(eb) eb.remove();
+      clone.querySelector('body').classList.remove('editing');
+      clone.querySelector('#menu-data').textContent = '\n' + JSON.stringify(DATA, null, 2) + '\n';
+      var out = '<!DOCTYPE html>\n' + clone.outerHTML;
+      var url = URL.createObjectURL(new Blob([out], {type:'text/html'}));
+      var a = document.createElement('a');
+      a.href = url; a.download = 'index.html'; document.body.appendChild(a); a.click();
+      a.remove(); setTimeout(function(){ URL.revokeObjectURL(url); }, 3000);
+    });
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>
